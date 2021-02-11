@@ -112,3 +112,35 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+.name-change-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#input-name{
+    text-align: center;
+    height: 20px;
+}
+
+button{
+    padding: 10px 10px;
+}
+
+#button-modifiers section{
+    display: flex;
+    justify-content: space-between;
+}
+
+#pink-color-btn{
+    background: pink;
+}
+#blue-color-btn{
+    background: lightblue;
+}
+
+#green-color-btn{
+    background: lightgreen;
+}
