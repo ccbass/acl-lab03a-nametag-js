@@ -1,20 +1,21 @@
-let nametagName = document.getElementById("name") 
-let inputButton = document.getElementById("clickme")
+const nametag = document.getElementById("name") 
+const inputButton = document.getElementById("clickme")
+const fontButton = document.getElementById('font-btn')
 
 const nameHandler = () => {
     const inputName = document.getElementById("input-name")
     let limit = ""
     limit = inputName.value.slice(0, 18)
     if (limit.length > 0){
-        nametagName.textContent = limit
+        nametag.textContent = limit
     }
     inputName.value = ""
 }
 
 
-let pinkColorButton = document.getElementById("pink-color-btn")
-let greenColorButton = document.getElementById("green-color-btn")
-let blueColorButton = document.getElementById("blue-color-btn")
+const pinkColorButton = document.getElementById("pink-color-btn")
+const greenColorButton = document.getElementById("green-color-btn")
+const blueColorButton = document.getElementById("blue-color-btn")
 
 const colorHandler = (e) => {
     const tagTop = document.getElementById("nametag-top")
@@ -24,6 +25,19 @@ const colorHandler = (e) => {
     tagBottom.style.background = e.target.value
 }
 
+let fonts = ['Cedarville Cursive','monospace', 'serif', 'sans-serif']
+let defaultFont = 0
+nametag.style.fontFamily = fonts[defaultFont]
+
+const fontChanger = () => {
+    defaultFont++
+    if (defaultFont > 3){
+        defaultFont = defaultFont % 4
+    }
+    nametag.style.fontFamily = fonts[defaultFont]
+}
+
+
 
 inputButton.addEventListener("click", nameHandler)
 
@@ -31,3 +45,4 @@ pinkColorButton.addEventListener("click", colorHandler)
 greenColorButton.addEventListener("click", colorHandler)
 blueColorButton.addEventListener("click", colorHandler)
 
+fontButton.addEventListener('click', fontChanger)
