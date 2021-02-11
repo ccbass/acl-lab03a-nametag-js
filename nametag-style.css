@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
 
 :root{
     --headnavfoot-color: rgb(126, 162, 170);
@@ -88,6 +83,7 @@ main{
 #nametag-middle{
     display: flex;
     height: 50%;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: white;
@@ -95,7 +91,7 @@ main{
 
 #name{
     font-family: 'Cedarville Cursive', monospace;
-    font-size: 3.5em;
+    font-size: 3em;
 }
 
 #nametag-bottom{
