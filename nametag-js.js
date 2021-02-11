@@ -27,14 +27,18 @@ const colorHandler = (e) => {
 
 let fonts = ['Cedarville Cursive','monospace', 'serif', 'sans-serif']
 let defaultFont = 0
+let count = 0
 nametag.style.fontFamily = fonts[defaultFont]
 
 const fontChanger = () => {
-    defaultFont++
+    defaultFont++;
+    count++;
     if (defaultFont > 3){
         defaultFont = defaultFont % 4
     }
     nametag.style.fontFamily = fonts[defaultFont]
+
+    fontButton.textContent = `Change Font! (changed ${count} time(s)!)`
 }
 
 
